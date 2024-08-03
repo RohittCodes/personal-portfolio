@@ -4,6 +4,12 @@ import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 
 const Header = () => {
+  const shareOnX = () => {
+    const tweet = "Check out this awesome post on Rustcrab!";
+    const url = "https://rohittcodes.netlify.app";
+    window.location.href = `https://twitter.com/intent/tweet?text=${tweet}&url=${url}`;
+  };
+
   return (
     <section id="profile">
       <div className="section__pic-container">
@@ -53,9 +59,7 @@ const Header = () => {
           </a>
           <button
             className="btn btn-color-1"
-            onClick={() => {
-              location.href = "#contact";
-            }}
+            onClick={shareOnX}
           >
             Contact Me
           </button>
