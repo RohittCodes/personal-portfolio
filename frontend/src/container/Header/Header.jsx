@@ -4,6 +4,7 @@ import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 
 const Header = () => {
+  // implement shareOnX functions
   const shareOnX = () => {
     const tweet = "Check out this awesome post on Rustcrab!";
     const url = "https://rohittcodes.netlify.app";
@@ -59,7 +60,9 @@ const Header = () => {
           </a>
           <button
             className="btn btn-color-1"
-            onClick={shareOnX}
+            onClick={() => {
+              location.href = "#contact";
+            }}
           >
             Contact Me
           </button>
